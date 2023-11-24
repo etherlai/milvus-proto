@@ -1448,6 +1448,7 @@ message CreateResourceGroupRequest {
   };
   common.MsgBase base = 1;
   string resource_group = 2;
+  map<string, string> node_selector = 3;
 }
 
 message DropResourceGroupRequest {
@@ -1527,6 +1528,7 @@ message ResourceGroup {
   map<string, int32> num_outgoing_node = 5;
    // collection name -> be accessed node num by other rg
   map<string, int32> num_incoming_node = 6;
+  map<string, string> node_selector = 7;
 }
 
 message RenameCollectionRequest {
